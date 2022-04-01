@@ -1,0 +1,124 @@
+.layout-atlas-phone {
+    .phone-logo {
+        width: 50px;
+        margin-left: 55px;
+    }
+
+    .mx-header {
+        height: 60px;
+        background-color: #000;
+        border-bottom-color: #5a80bc ;
+
+        .mx-title {        
+            font-weight: 700;
+            color: #5a80bc !important;
+            font-size: 22px !important;
+            line-height: 60px !important;
+        }
+    }
+
+    &.register-page {
+        background-color: #000;
+        background-image: url('../../../../resources/registration.jpg');
+        background-position: center top;
+        background-size: cover;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+
+        .profile-pic-container {
+            z-index: 2;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #5a80bc;
+            background-color: #fff;
+            overflow: hidden;
+            border-radius: 50%;
+            display: flex;
+            float: left;
+            margin-bottom: 20px;
+            position: relative;
+
+            img {
+                object-fit: contain;
+                object-position: bottom;
+            }
+        }
+
+        .registration-form-container {
+            z-index: 2;
+            padding: 20px 15px 0px;
+
+            h2 {
+                color: #fff;
+                text-align: center;
+            }
+
+            label {
+                color: #fff;
+                font-weight: 100;
+            }
+
+            .mx-dataview-content {
+                overflow-x: hidden !important;
+            }
+
+            .mx-dataview-controls {
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            input[type=text],
+            input[type=password] {
+                &.form-control {
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    border-radius: 0;
+                    padding: 10px 0;
+                    color: #fff;
+
+                    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                        color: #fff;
+                        opacity: 1; /* Firefox */
+                    }
+
+                    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                        color: #fff;
+                    }
+                      
+                    &::-ms-input-placeholder { /* Microsoft Edge */
+                    color: #fff;
+                    }
+                }
+            }
+
+            .mx-fileinput-upload-button {
+                border-radius: 0;
+                border-color: #000;
+                color: #000;
+            }
+
+            .cta-button {
+                width: 100%;
+                white-space: pre-wrap;
+                border-radius: 0;
+                border-width: 0;
+                background-color:#f7f94d !important;
+                padding: 15px 0;
+                color: #000;
+                text-transform: uppercase;
+                font-size: $font-size-h4;
+            }
+        }
+    }
+}
